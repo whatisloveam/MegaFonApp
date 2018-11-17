@@ -5,15 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MegafonInvalidApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinWidth="600" MinHeight="600">
+        Title="MainWindow" Width="1200" Height="700" MinWidth="1200" MinHeight="700">
+
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle">
+            <Setter Property="Control.FontSize" Value="18"></Setter>
+            <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Control.Padding" Value="5"></Setter>
+            <Setter Property="Control.Focusable" Value="False"></Setter>
+            <Setter Property="Control.BorderBrush" Value="Black"></Setter>
+            <Setter Property="Control.Background" Value="#FF89F382"></Setter>
+            <Setter Property="Control.BorderThickness" Value="1"></Setter>
+            <Setter Property="Control.FontFamily" Value="Segoe UI"></Setter>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200">
+            <StackPanel Orientation="Horizontal" Width="1200">
+                <Image Source="Images/logo.png" Width="300" HorizontalAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" Text="Портал социальной помощи в трудоустройстве людям с инвалидностью" HorizontalAlignment="Center" TextAlignment="Center" Width="500" Margin="50,50,0,0" FontSize="22"/>
+            </StackPanel>
             
-            <TextBlock x:Name="Autorization_Text" Text="Авторизация" TextAlignment="Left" VerticalAlignment="Center" Margin="20,0" FontSize="22" FontFamily="Segoe UI Light" Height="30" />
-            <TextBlock x:Name="Login_Text" Text="Логин" TextAlignment="Left" VerticalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="14" />
-            <TextBox x:Name="Login_Box" Height="30" Width="350" />
-            <TextBlock x:Name="Password_Text" Text="Пароль" TextAlignment="Left" VerticalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="14" />
-            <TextBox x:Name="Password_Box" Height="30" Width="350" />
+            
+            
+            <Rectangle x:Name="Line1" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center"/>
+            
+            <StackPanel Width="350" Orientation="Vertical"  Margin="0,20,0,0">
+                <TextBlock x:Name="Autorization_Text" Text="Авторизация" TextAlignment="Center" HorizontalAlignment="Center" Margin="20,0" FontSize="22" FontFamily="Segoe UI Light" Height="30" />
+                <TextBlock x:Name="Login_Text" Text="Логин" HorizontalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="20" FontFamily="Segoe UI Light" />
+                <TextBox x:Name="Login_Box" Height="30" Width="350" TextAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="Password_Text" Text="Пароль" HorizontalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="18" FontFamily="Segoe UI Light" />
+                <TextBox x:Name="Password_Box" Height="30" Width="350" />
+                <Button Style="{StaticResource MyButtonStyle}" Margin="0,50,0,0" Width="350" Content="Отправить"/>
+            </StackPanel>
+            
+
+            <Rectangle x:Name="Line2" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center" Margin="0,80,0,0"/>
         </StackPanel>
     </Grid>
 </Window>
