@@ -42,7 +42,7 @@
             
 
             <Rectangle x:Name="Line2" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center" Margin="0,80,0,0"/>
-            <TextBox BorderThickness="0" x:Name="MegaHack" Text="MegaHack" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="60" Height="19" VerticalAlignment="Center" Foreground="#FF7C7C7C" Margin="0,20,0,0" />
+            <TextBox BorderThickness="0" x:Name="MegaHack" Text="dMegaHack" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="60" Height="19" VerticalAlignment="Center" Foreground="#FF7C7C7C" Margin="0,20,0,0" />
         </StackPanel>
     </Grid>
 </Window>
