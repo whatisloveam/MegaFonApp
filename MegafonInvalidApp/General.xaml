@@ -278,9 +278,16 @@
                         </StackPanel>
                     </TabItem.Header>
                     <TabItem.Content>
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                
+                                <StackPanel Orientation="Vertical" >
 
-                        </StackPanel>
+                                </StackPanel>
+                                <StackPanel>
+
+                                </StackPanel>
+
+                            </StackPanel>
                     </TabItem.Content>
                 </TabItem>
                 <TabItem x:Name="Zakazi" Background="White" BorderBrush="White" Width="150" >
