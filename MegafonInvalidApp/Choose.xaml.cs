@@ -18,11 +18,20 @@ namespace MegafonInvalidApp
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Choose : Window
     {
-        public MainWindow()
+        public Choose()
         {
             InitializeComponent();
+            
+        }
+        void OnClick1(object sender, RoutedEventArgs e)
+        {
+            //btn1.Background = Brushes.Pink;
+        }
+        void OnClick2(object sender, RoutedEventArgs e)
+        {
+            //btn2.Background = Brushes.Pink;
         }
     }
 }
