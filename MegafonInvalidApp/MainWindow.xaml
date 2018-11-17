@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MegafonInvalidApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="1200" Left="100" Top="30">
     <Grid>
         <Frame Source="Choose.xaml" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
