@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -25,10 +27,23 @@ namespace InvalidAppHttpClient
             return PostWithRetriesRaw(uri, data, contentType).Select(r => r.Content.ReadAsStringAsync().Result);
         }
 
+        public Result<string> PostWithRetries(Uri uri, IDictionary<string, string> data, string contentType)
+        {
+            return PostWithRetriesRaw(uri, data, contentType).Select(r => r.Content.ReadAsStringAsync().Result);
+        }
+
         public Result<HttpResponseMessage> PostWithRetriesRaw(Uri uri, string data, string contentType)
         {
-            var content = string.IsNullOrEmpty(data) ? null : new StringContent(data, Encoding.UTF8, contentType);
+            var content = string.IsNullOrEmpty(data) ? null : new StringContent(data, Encoding.UTF8, contentType);           
             return SendRequestWithRetries(ct => client.PostAsync(uri, content, ct)).Result;
+        }
+
+        public Result<HttpResponseMessage> PostWithRetriesRaw(Uri uri, IDictionary<string, string> data,
+            string contentType)
+        {
+            var content = new FormUrlEncodedContent(data);
+            return SendRequestWithRetries(ct => client.PostAsync(uri, content, ct)).Result;
+
         }
 
         public Result<string> GetWithRetries(Uri uri)

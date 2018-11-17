@@ -1,9 +1,10 @@
 using System.Linq;
 using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace InvalidAppHttpClient
 {
-    internal static class Helper
+    internal static class HelperExtensions
     {
         public static string GetHeader(this HttpResponseMessage message, string name) => message.Content.Headers.GetValues(name).Single();
 
