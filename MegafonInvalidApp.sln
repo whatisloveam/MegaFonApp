@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegafonInvalidApp", "MegafonInvalidApp\MegafonInvalidApp.csproj", "{39FB629E-0AB0-4DF0-9B6B-F939CE138206}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvalidAppInfrastucture", "InvalidAppHttpClient\InvalidAppInfrastucture.csproj", "{94B42F41-37C6-43BA-8C93-8C39F0C96E72}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{39FB629E-0AB0-4DF0-9B6B-F939CE138206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39FB629E-0AB0-4DF0-9B6B-F939CE138206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39FB629E-0AB0-4DF0-9B6B-F939CE138206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39FB629E-0AB0-4DF0-9B6B-F939CE138206}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94B42F41-37C6-43BA-8C93-8C39F0C96E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94B42F41-37C6-43BA-8C93-8C39F0C96E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B42F41-37C6-43BA-8C93-8C39F0C96E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
