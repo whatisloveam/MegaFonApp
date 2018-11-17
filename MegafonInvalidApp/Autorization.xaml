@@ -34,14 +34,15 @@
             <StackPanel Width="350" Orientation="Vertical"  Margin="0,20,0,0">
                 <TextBlock x:Name="Autorization_Text" Text="Авторизация" TextAlignment="Center" HorizontalAlignment="Center" Margin="20,0" FontSize="22" FontFamily="Segoe UI Light" Height="30" />
                 <TextBlock x:Name="Login_Text" Text="Логин" HorizontalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="20" FontFamily="Segoe UI Light" />
-                <TextBox x:Name="Login_Box" Height="30" Width="350" TextAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox x:Name="Login_Box" Height="30" Width="350" TextAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
                 <TextBlock x:Name="Password_Text" Text="Пароль" HorizontalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="18" FontFamily="Segoe UI Light" />
-                <TextBox x:Name="Password_Box" Height="30" Width="350" />
+                <TextBox x:Name="Password_Box" Height="30" Width="350" FontSize="20" TextAlignment="Center" />
                 <Button Style="{StaticResource MyButtonStyle}" Margin="0,50,0,0" Width="350" Content="Отправить"/>
             </StackPanel>
             
 
             <Rectangle x:Name="Line2" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center" Margin="0,80,0,0"/>
+            <TextBox BorderThickness="0" x:Name="MegaHack" Text="MegaHack" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="60" Height="19" VerticalAlignment="Center" Foreground="#FF7C7C7C" Margin="0,20,0,0" />
         </StackPanel>
     </Grid>
 </Window>
