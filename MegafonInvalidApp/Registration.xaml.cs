@@ -18,7 +18,7 @@ namespace MegafonInvalidApp
     /// <summary>
     /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class Registration : Window
+    public partial class Registration : Page
     {
         public Registration()
         {

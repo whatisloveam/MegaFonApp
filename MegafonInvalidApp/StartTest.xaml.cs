@@ -18,7 +18,7 @@ namespace MegafonInvalidApp
     /// <summary>
     /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class StartTest : Window
+    public partial class StartTest : Page
     {
         public StartTest()
         {

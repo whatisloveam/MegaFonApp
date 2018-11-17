@@ -16,27 +16,13 @@ using System.Windows.Shapes;
 namespace MegafonInvalidApp
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class Choose : Page
+    public partial class Registration3 : Page
     {
-        public Choose()
+        public Registration3()
         {
             InitializeComponent();
-            
-        }
-        void OnClick1(object sender, RoutedEventArgs e)
-        {
-            //btn1.Background = Brushes.Pink;
-        }
-        void OnClick2(object sender, RoutedEventArgs e)
-        {
-            //btn2.Background = Brushes.Pink;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
         }
     }
 }
