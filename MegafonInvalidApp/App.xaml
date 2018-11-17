@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MegafonInvalidApp"
              xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="MegafonInvalidApp.App"
-             StartupUri="Choose.xaml">
+             StartupUri="General.xaml">
     <Application.Resources>
 
         <Style x:Key="ButtonFocusVisual">

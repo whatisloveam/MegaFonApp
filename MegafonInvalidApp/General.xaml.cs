@@ -24,5 +24,20 @@ namespace MegafonInvalidApp
         {
             InitializeComponent();
         }
+
+        private void LastName_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (LastName.Text == "Фамилия") LastName.Text = "";
+        }
+
+        private void FirstName_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (FirstName.Text == "Имя") FirstName.Text = "";
+        }
+
+        private void Otchestvo_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Otchestvo.Text == "Отчество") Otchestvo.Text = "";
+        }
     }
 }

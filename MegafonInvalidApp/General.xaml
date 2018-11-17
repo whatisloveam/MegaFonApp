@@ -278,13 +278,22 @@
                         </StackPanel>
                     </TabItem.Header>
                     <TabItem.Content>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                
-                                <StackPanel Orientation="Vertical" >
-
+                        <StackPanel Orientation="Horizontal" >
+                                <Image Source="Images/Icon.png" HorizontalAlignment="Left" Width="200"></Image>
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="20,0,0,0" >
+                                    <TextBox x:Name="LastName" BorderThickness="0" Height="30" Width="200" PreviewMouseDown="LastName_PreviewMouseDown"  TextAlignment="Center" VerticalAlignment="Top" FontSize="20" Text="Фамилия" Margin="20,40,0,0"/>
+                                    <Rectangle x:Name="Linee1" Fill="Black" Width="200" Height="1" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                                    <TextBox x:Name="FirstName" BorderThickness="0"  Height="30" Width="200" PreviewMouseDown="FirstName_PreviewMouseDown" TextAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="Имя" Margin="20,20,0,0"/>
+                                    <Rectangle x:Name="Linee2" Fill="Black" Width="200" Height="1" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                                    <TextBox x:Name="Otchestvo" BorderThickness="0"  Height="30" Width="200" PreviewMouseDown="Otchestvo_PreviewMouseDown" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="20" Text="Отчество" Margin="20,20,0,0"/>
+                                    <Rectangle x:Name="Linee3" Fill="Black" Width="200" Height="1" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                                    <Button Style="{StaticResource MyButtonStyle}" Margin="0,70,0,0" Width="350" Content="Написать наставнику"/>
                                 </StackPanel>
-                                <StackPanel>
-
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="50,95,0,0">
+                                    <TextBlock x:Name="lol" Text="Специальность:" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="150" Height="30" VerticalAlignment="Center"  Margin="0,20,0,0" FontSize="20" />
+                                    <Rectangle x:Name="Linee4" Fill="Black" Width="150" Height="1" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                                    <TextBlock x:Name="lol1" Text="Веб-дизайнер" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="150" Height="30" VerticalAlignment="Center"  Margin="0,20,0,0" FontSize="20" />
+                                    <Button Style="{StaticResource MyButtonStyle}" Margin="0,66,0,0" Width="350" Content="Позвонить наставнику"/>
                                 </StackPanel>
 
                             </StackPanel>
