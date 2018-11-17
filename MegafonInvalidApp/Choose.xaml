@@ -20,10 +20,8 @@
             <Setter Property="Control.FontFamily" Value="Segoe UI"></Setter>
         </Style>
     </Window.Resources>
+    
     <Grid>
-
-
-
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200">
             <StackPanel Orientation="Horizontal" Width="1200">
                 <Image Source="Images/logo.png" Width="300" HorizontalAlignment="Left"/>
