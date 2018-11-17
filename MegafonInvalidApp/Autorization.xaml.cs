@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegafonInvalidApp.NavigationHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,16 @@ namespace MegafonInvalidApp
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Autorization : Page
     {
-        public MainWindow()
+        public Autorization()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Navigator.Service.Navigate(new StartTest());
         }
     }
 }

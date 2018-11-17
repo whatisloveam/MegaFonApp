@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegafonInvalidApp.NavigationHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace MegafonInvalidApp
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class Choose : Window
+    public partial class Choose : Page
     {
         public Choose()
         {
@@ -32,6 +33,11 @@ namespace MegafonInvalidApp
         void OnClick2(object sender, RoutedEventArgs e)
         {
             //btn2.Background = Brushes.Pink;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Navigator.Service.Navigate(new Autorization());
         }
     }
 }

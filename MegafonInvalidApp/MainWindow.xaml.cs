@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MegafonInvalidApp.NavigationHelper;
+using MegafonInvalidApp.ViewModels;
+using MegafonInvalidApp.ViewModels.Resolver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +13,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MegafonInvalidApp
@@ -23,6 +25,14 @@ namespace MegafonInvalidApp
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
+
+        }
+
+        void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            Navigator.Service = MainFrame.NavigationService;
+            DataContext = new MainViewModel(new ViewModelsResolver());
         }
     }
 }
