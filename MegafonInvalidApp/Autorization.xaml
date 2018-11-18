@@ -20,7 +20,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
+    <Grid x:Name="grid">
         <Frame x:Name="frameAutorization"/>
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200">
             <StackPanel Orientation="Horizontal" Width="1200">

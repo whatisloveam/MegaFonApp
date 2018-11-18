@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -56,14 +59,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Client\HelperExtensions.cs" />
+    <Compile Include="Client\HttpClientWithRetries.cs" />
+    <Compile Include="Client\Result.cs" />
+    <Compile Include="Client\Status.cs" />
+    <Compile Include="Example\ExampleSender.cs" />
+    <Compile Include="General.xaml.cs">
+      <DependentUpon>General.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="NavigationHelper\Navigator.cs" />
     <Compile Include="NavigationHelper\PageResolver.cs" />
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration2.xaml.cs">
+      <DependentUpon>Registration2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration3.xaml.cs">
+      <DependentUpon>Registration3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Serializer\ObjectSerializer.cs" />
+    <Compile Include="Serializer\SerializeAttribute\CustomSerializeNameAttribute.cs" />
+    <Compile Include="Serializer\SerializerExtensions.cs" />
     <Compile Include="StartTest.xaml.cs">
       <DependentUpon>StartTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ChooseViewModel.cs" />
@@ -94,9 +118,25 @@
       <DependentUpon>Choose.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="General.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Registration2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Registration3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="StartTest.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +161,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,6 +173,8 @@
   <ItemGroup>
     <Resource Include="Images\logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
