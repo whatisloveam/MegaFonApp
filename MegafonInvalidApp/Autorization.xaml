@@ -35,7 +35,7 @@
                 <TextBlock x:Name="Login_Text" Text="Логин" HorizontalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="20" FontFamily="Segoe UI Light" />
                 <TextBox x:Name="Login_Box" Height="30" Width="350" TextAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
                 <TextBlock x:Name="Password_Text" Text="Пароль" HorizontalAlignment="Center" Margin="20,20,20,0" Height="30" FontSize="18" FontFamily="Segoe UI Light" />
-                <TextBox x:Name="Password_Box" Height="30" Width="350" FontSize="20" TextAlignment="Center" />
+                <PasswordBox x:Name="Password_Box" Height="30" Width="350" FontSize="20"  />
                 <Button IsDefault="True" Focusable="True" Style="{StaticResource MyButtonStyle}" Margin="0,50,0,0" Width="350" Content="Отправить" Click="Button_Click"/>
             </StackPanel>
 

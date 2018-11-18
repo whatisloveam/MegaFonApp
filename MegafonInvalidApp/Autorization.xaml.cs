@@ -109,12 +109,12 @@ namespace MegafonInvalidApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ((Login_Box.Text == "") || (Password_Box.Text == ""))
+            if ((Login_Box.Text == "") || (Password_Box.Password == ""))
             {
             }
             else
             {
-                var user = new AuthUser { Mail = Login_Box.Text, Password = CreateMD5(Password_Box.Text).ToLower() };
+                var user = new AuthUser { Mail = Login_Box.Text, Password = CreateMD5(Password_Box.Password).ToLower() };
                 status = Storage.SendPost("http://192.168.43.31", user);
                 if (status.Contains("wrong password or login")) // lox
                 {
