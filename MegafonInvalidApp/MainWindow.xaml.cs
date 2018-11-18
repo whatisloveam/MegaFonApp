@@ -31,6 +31,8 @@ namespace MegafonInvalidApp
 
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            Storage.WebClient = new System.Net.WebClient();
+            this.Closing += (ev, csender) => Storage.WebClient.Dispose();
             Navigator.Service = MainFrame.NavigationService;
             DataContext = new MainViewModel(new ViewModelsResolver());
         }

@@ -188,81 +188,30 @@
                     <TabItem.Content>
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                                 <Rectangle x:Name="Line3" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center" />
-                                <TextBlock Text="Все проекты" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="125" Height="40" VerticalAlignment="Center"  FontSize="22" />
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="205,0,0,0">
+                                    <TextBlock Text="Все проекты" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Width="125" Height="40" VerticalAlignment="Center"  FontSize="22" />
+                                    <Button Style="{StaticResource MyButtonStyle}" x:Name="Refresh_btn" Width="200" Content="Обновить" Click="Refresh_btn_Click"/>
+                                </StackPanel>    
+                                   
                                 <Rectangle Fill="Black" Width="125" Height="2" HorizontalAlignment="Center" />
 
-                                <ListView VerticalContentAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                <ListView x:Name="lvDataBinding" VerticalContentAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Visible"
           ScrollViewer.CanContentScroll="False" Height="380">
-                                    <ListBoxItem>
-                                        <StackPanel Orientation="Vertical">
-                                            <StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock   Text="Нужно написать название описание к товарам на сайте" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
-                                                    <TextBlock  Text="10000 руб." HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <StackPanel>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock   Text="{Binding Title}" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
+                                                        <TextBlock  Text="{Binding Price}" HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
+                                                    </StackPanel>
+                                                    <TextBlock   Text="{Binding Description}" TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
+                                                    <TextBlock  Text="{Binding DateDiff}" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
+                                                    <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
                                                 </StackPanel>
-                                                <TextBlock   Text="Я скидываю фото материал и excel файл где написано название товара, артикул, количество и цена. вы к каждой фотографии пишите описание и потом добавляете на сайт. Техническая..." TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
-                                                <TextBlock  Text="2 дня назад" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
-                                                <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
                                             </StackPanel>
-                                        </StackPanel>
-                                    </ListBoxItem>
-
-                                    <ListBoxItem>
-                                        <StackPanel Orientation="Vertical">
-                                            <StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock   Text="Нужно написать название описание к товарам на сайте" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
-                                                    <TextBlock  Text="10000 руб." HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
-                                                </StackPanel>
-                                                <TextBlock   Text="Я скидываю фото материал и excel файл где написано название товара, артикул, количество и цена. вы к каждой фотографии пишите описание и потом добавляете на сайт. Техническая..." TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
-                                                <TextBlock  Text="2 дня назад" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
-                                                <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </ListBoxItem>
-
-                                    <ListBoxItem>
-                                        <StackPanel Orientation="Vertical">
-                                            <StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock   Text="Нужно написать название описание к товарам на сайте" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
-                                                    <TextBlock  Text="10000 руб." HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
-                                                </StackPanel>
-                                                <TextBlock   Text="Я скидываю фото материал и excel файл где написано название товара, артикул, количество и цена. вы к каждой фотографии пишите описание и потом добавляете на сайт. Техническая..." TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
-                                                <TextBlock  Text="2 дня назад" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
-                                                <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </ListBoxItem>
-
-                                    <ListBoxItem>
-                                        <StackPanel Orientation="Vertical">
-                                            <StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock   Text="Нужно написать название описание к товарам на сайте" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
-                                                    <TextBlock  Text="10000 руб." HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
-                                                </StackPanel>
-                                                <TextBlock   Text="Я скидываю фото материал и excel файл где написано название товара, артикул, количество и цена. вы к каждой фотографии пишите описание и потом добавляете на сайт. Техническая..." TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
-                                                <TextBlock  Text="2 дня назад" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
-                                                <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </ListBoxItem>
-
-                                    <ListBoxItem>
-                                        <StackPanel Orientation="Vertical">
-                                            <StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock   Text="Нужно написать название описание к товарам на сайте" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
-                                                    <TextBlock  Text="10000 руб." HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
-                                                </StackPanel>
-                                                <TextBlock   Text="Я скидываю фото материал и excel файл где написано название товара, артикул, количество и цена. вы к каждой фотографии пишите описание и потом добавляете на сайт. Техническая..." TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
-                                                <TextBlock  Text="2 дня назад" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
-                                                <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </ListBoxItem>
-
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
                                 </ListView>
                                 
                             </StackPanel>
@@ -307,8 +256,25 @@
                     </TabItem.Header>
                     <TabItem.Content>
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-
-                        </StackPanel>
+                                <ListView x:Name="Offers" VerticalContentAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Visible"
+          ScrollViewer.CanContentScroll="False" Height="380">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <StackPanel>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock   Text="{Binding Title}" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="900" Foreground="#FF002EFF" />
+                                                        <TextBlock  Text="{Binding Price}" HorizontalAlignment="Right" FontFamily="Segoe UI Light" Height="40" VerticalAlignment="Center"  FontSize="20" Width="150" Foreground="#FF34F016" />
+                                                    </StackPanel>
+                                                    <TextBlock   Text="{Binding Description}" TextWrapping="Wrap" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="60" VerticalAlignment="Center" Width="1100" FontSize="16" />
+                                                    <TextBlock  Text="{Binding DateDiff}" HorizontalAlignment="Left" FontFamily="Segoe UI Light" Height="15" VerticalAlignment="Center"  FontSize="10" Width="150"  />
+                                                    <Rectangle Fill="Black" Width="1100" Height="1" HorizontalAlignment="Center" />
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackPanel>
                     </TabItem.Content>
                 </TabItem>
                 <TabItem x:Name="Portfolio" Background="White" BorderBrush="White" Width="150" >

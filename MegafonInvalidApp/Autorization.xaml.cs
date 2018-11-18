@@ -21,6 +21,7 @@ using InvalidAppHttpClient;
 using InvalidAppHttpClient.Serializer;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace MegafonInvalidApp
 {
@@ -30,7 +31,7 @@ namespace MegafonInvalidApp
     public partial class Autorization : Page
     {
         string status;
-        string path = @"C:\Users\Public\WriteLines2.txt";
+        public static string path = @"C:\Users\Public\WriteLines2.txt";
         public Autorization()
         {
             InitializeComponent();
@@ -106,34 +107,6 @@ namespace MegafonInvalidApp
             }
         }
 
-        public string SendAndResponse()
-        {
-            /*
-            var pass = CreateMD5(Password_Box.Text);
-            var httpClient = new HttpClientWithRetries(10, TimeSpan.FromMilliseconds(1000), TimeSpan.FromMilliseconds(2000));
-            var objToSend = new User { mail = "vasya@mail.ru", password = "123" };
-            var serializedObj = objToSend.Serialize();
-            var res = httpClient.PostWithRetries(new Uri("http://192.168.42.87"), serializedObj, "text/plain");
-            var resValue = res.Value;
-            return resValue;*/
-
-            using (var wb = new WebClient())
-            {
-                var data = new NameValueCollection();
-                var pass = CreateMD5(Password_Box.Text);
-                pass = pass.ToLower();
-                data["mail"] = Login_Box.Text;
-                data["password"] = pass;//"123";
-
-
-                var response = wb.UploadValues("http://192.168.43.31", "POST", data);
-                string responseInString = Encoding.UTF8.GetString(response);
-                //Login_Text.Text = responseInString;
-                //MessageBox.Show(responseInString);
-                return responseInString;
-            }
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if ((Login_Box.Text == "") || (Password_Box.Text == ""))
@@ -141,22 +114,18 @@ namespace MegafonInvalidApp
             }
             else
             {
-                status = SendAndResponse();
+                var user = new AuthUser { Mail = Login_Box.Text, Password = CreateMD5(Password_Box.Text).ToLower() };
+                status = Storage.SendPost("http://192.168.43.31", user);
                 if (status.Contains("wrong password or login")) // lox
                 {
                     MessageBox.Show("Wrong password or username");
                 }
                 else // victory
                 {
-                    dynamic results = JsonConvert.DeserializeObject<dynamic>(status.ToString());
-                    Login_Text.Text = results.user_id + " " + results.user_name + " __ " + results.user_surname;
-                   
-                    TextWriter tw = new StreamWriter(path);
-                    tw.WriteLine(System.DateTime.Now.ToShortDateString());
-                    tw.WriteLine(results.user_id);
-                    tw.WriteLine(results.user_name);
-                    tw.WriteLine(results.user_surname);
-                    tw.Close();
+                    var results = JsonConvert.DeserializeObject<User>(status.ToString());
+                    Login_Text.Text = results.Id + " " + results.Name + " __ " + results.Surname;
+
+                    Storage.CurrentProblemUser = results;
                     Navigator.Service.Navigate(new General());
                 }
             }

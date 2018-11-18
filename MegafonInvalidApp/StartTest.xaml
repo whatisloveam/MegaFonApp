@@ -26,9 +26,9 @@
                 <TextBlock TextWrapping="Wrap" Text="Портал социальной помощи в трудоустройстве людям с инвалидностью" HorizontalAlignment="Center" TextAlignment="Center" Width="500" Margin="50,50,0,0" FontSize="22"/>
             </StackPanel>
             <Rectangle x:Name="Line1" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center"   />
-            <StackPanel Width="350" Orientation="Vertical" Margin="0,20,0,0">
+            <StackPanel Width="700" Orientation="Vertical" Margin="0,20,0,0">
                 <TextBlock x:Name="Registration" Text="Регистрация" TextAlignment="Center" HorizontalAlignment="Center" Margin="20,0" FontSize="25" FontFamily="Segoe UI Light" Height="30" />
-                <TextBlock x:Name="Description" TextWrapping="Wrap" Text="При регистрации все сотрудники проходят професиональный и психологический тест для наилучшего подбора пар наставник - работнк" HorizontalAlignment="Center" Margin="20,20,20,0" Height="100" FontSize="22" FontFamily="Segoe UI Light" Width="600" />
+                <TextBlock x:Name="Description" TextWrapping="Wrap" Text="При регистрации все сотрудники проходят професиональный и психологический тест для наилучшего подбора пар наставник - работник" HorizontalAlignment="Center" Margin="20,20,20,0" Height="100" FontSize="22" FontFamily="Segoe UI Light" Width="600" />
                 <Button Style="{StaticResource MyButtonStyle}" Margin="0,30,0,0" Width="350" Content="Начать тестирование"/>
             </StackPanel>
             <Rectangle x:Name="Line2" Fill="Black" Width="1100" Height="2" HorizontalAlignment="Center" Margin="0,80,0,0"/>
